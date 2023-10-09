@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		".css": "tailwindcss"
+	},
+	"WillLuke.nextjs.addTypesOnSave": true,
+	"WillLuke.nextjs.hasPrompted": true
+}

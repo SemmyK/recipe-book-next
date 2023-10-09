@@ -2,12 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root,
+html,
+body {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
 }
 
+.home .card {
+	transition: all 0.3s ease;
+}
+
+.home .card:hover {
+	transform: rotate(4deg);
+}
+
+.home .card li::after {
+	content: ' | ';
+}
+
+.home .card li:last-child::after {
+	content: '';
+}
+
+.recipe ul,
+ol {
+	list-style-image: url('../public/assets/food.svg') !important;
+}
+
+.recipe li {
+	padding-inline-start: 5px;
+}
+
+li::marker {
+	font-size: 1.5em;
+}
+/*theme selector*/
+
+.theme-selector {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.theme-buttons div {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin-left: 15px;
+	border-radius: 50%;
+}
+
+/* theme selector tooltip*/
+.tooltiptext {
+	visibility: hidden;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 0.5em;
+}
+
+.theme-buttons:hover .tooltiptext {
+	visibility: visible;
+}
+
+/*mode*/
+.mode-toggle {
+	margin-right: auto;
+}
+.mode-toggle img {
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
+.activeNav {
+	background-color: rgb(161, 102, 250);
+	color: #fff;
+	font-weight: bold;
+	border: #fff;
+}
+
+.active {
+	background-color: rgb(76, 29, 149);
+	color: #fff;
+	font-weight: bold;
+}
+
+.dark .active {
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+}
+
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -24,4 +113,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
