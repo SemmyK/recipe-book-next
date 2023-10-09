@@ -1,6 +1,6 @@
 # RecipeBook App Version 5.0.0
 
-## Recreated Recipe App with Next.js + MongoDB + TailwindCSS + next-aut + prisma
+## Recreated Recipe App with Next.js + MongoDB + TailwindCSS + next-auth + prisma
 
 ### Features
 
